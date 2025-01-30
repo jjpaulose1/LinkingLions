@@ -25,7 +25,7 @@
 	  **V - Mock** - https://www.vmock.com/lmu, 
 	  **BigInterview** - https://lmu.biginterview.com/
 	# The Pride is a very good resource and has a similar function as our end goal. The Pride allows students to set preferences and be given  profiles of alumni that fit their criteria. However, it is not promoted well, and students should not have to provide very specific details about  their goals which might cost them a few alumni connections. For example, with simple search criteria of looking for a job, and building my resume  for Finance, only two Alumni were selected that I could reach out to. It would be better for me to choose from the list of all Alumni who have  jobs in financial services as they all could reasonably give resume help and promote jobs. The Pride is very similar to what we are trying to  create, but we'd like to integrate more opportunities and events that students can attend as well as industry-specific study material that  students can learn as underclassmen before looking for internships and full-time roles.
-  # Link to The Pride: https://thepride.lmu.edu/hub/loyolamarymount/home-v3
+   Link to The Pride: https://thepride.lmu.edu/hub/loyolamarymount/home-v3
 
 # **ISBA Subfields**
 	# 1. Data Management 
