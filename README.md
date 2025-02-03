@@ -1,4 +1,4 @@
-# CapstoneCRM
+# LinkingLions
 
 # **1. Project Title**
 
