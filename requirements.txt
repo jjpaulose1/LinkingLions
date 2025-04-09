@@ -1,1 +1,2 @@
-web: gunicorn app:app
+Flask==2.0.2
+gunicorn==20.1.0
