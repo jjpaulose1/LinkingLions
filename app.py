@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import requests
+import os
 
 app = Flask(__name__)
 
@@ -12,31 +13,37 @@ HEADERS = {
     "Authorization": f"Bearer {AIRTABLE_API_KEY}"
 }
 
-
 @app.route("/")
 def index():
     # Fetch data from Airtable
     response = requests.get(AIRTABLE_URL, headers=HEADERS)
-    if response.status_code == 200:
-        records = response.json().get("records", [])
-        # Extract fields
-        desired_fields = ["FullName", "GraduationYear2", "JobTitle", "LinkedInUrl", "Rating"]
-        alumni_data = [
-            {field: record["fields"].get(field, "N/A") for field in desired_fields}
-            for record in records
-        ]
+    data = response.json()
+    records = data.get("records",[])
+    
+    if response.status_code != 200:
+       return f"Error fetching data" {reponse.status_code}"
+    desired fields - [
+        "FullName", "GraduationYear2", "JobTitle", "LinkedInUrl", "Rating"
+    ]
+
+    alumni_data = [
+        {field: record.get("fields", {}).get(field, "N/A")
+         for field in desired_fields}
+        for record in records
+    ]
         
         return render_template("index.html", alumni=alumni_data)
-    else:
-        return f"Error fetching data: {response.status_code}"
+
 
 if __name__ == "__main__":
-    app.run(debug=True)
-desired_fields = ["FullName", "GraduationYear2", "JobTitle", "LinkedInUrl", "Rating"]
-alumni_data = [
-    {field: record["fields"].get(field, "N/A") for field in desired_fields}
-    for record in records
-]
+    import pprint
+    print("Testing Airtable endpoint..."
+    resp = requests.get(AIRTABLE_URL, headers = HEADERS)
+    pprint.pprint({
+        "status": resp.status_code,
+        "payload": resp.json()
+        })
+app.run(debug=True) 
 
 
 """
