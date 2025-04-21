@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Directory</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2rem; }
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: left; }
+        th { background-color: #f4f4f4; }
+        a { color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Alumni Directory</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Graduation Year</th>
+                <th>Job Title</th>
+                <th>LinkedIn</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in alumni %}
+            <tr>
+                <td>{{ person.FullName }}</td>
+                <td>{{ person.GraduationYear2 }}</td>
+                <td>{{ person.JobTitle }}</td>
+                <td>
+                    {% if person.LinkedInUrl and person.LinkedInUrl != 'N/A' %}
+                        <a href="{{ person.LinkedInUrl }}" target="_blank">Profile</a>
+                    {% else %}
+                        N/A
+                    {% endif %}
+                </td>
+                <td>{{ person.Rating }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
