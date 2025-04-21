@@ -21,7 +21,7 @@ def index():
     records = data.get("records",[])
     
     if response.status_code != 200:
-    return f"Error fetching data: {response.status_code}"
+        return f"Error fetching data: {response.status_code}"
 
 #Fields we want
     desired_fields = [
