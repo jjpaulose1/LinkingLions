@@ -12,7 +12,7 @@ AIRTABLE_URL = f"https://api.airtable.com/v0/{AIRTABLE_BASE_ID}/{AIRTABLE_TABLE_
 HEADERS = {
     "Authorization": f"Bearer {AIRTABLE_API_KEY}"
 }
-
+#Fetching data from Airtable
 @app.route("/")
 def index():
     # Fetch data from Airtable
@@ -21,8 +21,9 @@ def index():
     records = data.get("records",[])
     
     if response.status_code != 200:
-       return f"Error fetching data" {reponse.status_code}"
-    desired fields - [
+       return f"Error fetching data" {response.status_code}"
+#Fields we want
+    desired_fields = [
         "FullName", "GraduationYear2", "JobTitle", "LinkedInUrl", "Rating"
     ]
 
