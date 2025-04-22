@@ -20,6 +20,13 @@ def index():
 
     data = response.json()
     records = data.get("records", [])
+    
+    #alphabetize the alumni 
+    sorted_records = sorted(
+        records,
+        key = lambda rec: rec.get("fields", {}.get("FullName", "").lower()
+        )
+                                  
 #Fields we want
     desired_fields = [
         "FullName",
