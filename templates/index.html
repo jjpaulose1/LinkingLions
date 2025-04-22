@@ -16,34 +16,28 @@
 <body>
     <h1>Alumni Directory</h1>
     <table>
-        <thead>
-            <tr>
-                <th>Full Name</th>
-                <th>Graduation Year</th>
-                <th>Job Title</th>
-                <th>LinkedIn</th>
-                <th>Rating</th>
-                <th>Last Parsed Time</th>
-                <th>Rating</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for person in alumni %}
-            <tr>
-                <td>{{ person.FullName }}</td>
-                <td>{{ person.GraduationYear2 }}</td>
-                <td>{{ person.JobTitle }}</td>
-                <td>
-                    {% if person.LinkedInUrl and person.LinkedInUrl != 'N/A' %}
-                        <a href="{{ person.LinkedInUrl }}" target="_blank">Profile</a>
-                    {% else %}
-                        N/A
-                    {% endif %}
-                </td>
-                <td>{{ person.Rating }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+  <thead>
+    <tr>
+      {% for col in columns %}
+        <th>{{ col }}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for person in alumni %}
+      <tr>
+        {% for col in columns %}
+          <td>
+            {% if col == "LinkedInUrl" and person[col] != "N/A" %}
+              <a href="{{ person[col] }}" target="_blank">Profile</a>
+            {% else %}
+              {{ person[col] }}
+            {% endif %}
+          </td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
 </body>
 </html>
