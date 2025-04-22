@@ -29,6 +29,8 @@ def index():
         "JobTitle",
         "LinkedInUrl",
         "Rating",
+        "Last Parsed Time",
+        "Confidence Score"
     ]
 
 #Sort  alumni by full name 
@@ -49,7 +51,7 @@ def index():
     ]
 
    
-    return render_template("index.html", alumni=alumni_data)
+    return render_template("index.html", alumni=alumni_data, columns=desired_fields)
 
 if __name__ == "__main__":
     app.run(debug=True)
@@ -68,4 +70,3 @@ if __name__ == "__main__":
     # Start Flask in debug mode
     app.run(debug=True)
     
-"""
