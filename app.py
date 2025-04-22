@@ -13,21 +13,16 @@ HEADERS = {"Authorization": f"Bearer {AIRTABLE_API_KEY}"}
 
 @app.route("/")
 def index():
-    # Fetch data
+
     response = requests.get(AIRTABLE_URL, headers=HEADERS)
     if response.status_code != 200:
         return f"Error fetching data: {response.status_code}"
 
+
     data = response.json()
     records = data.get("records", [])
-    
-    #alphabetize the alumni 
-    sorted_records = sorted(
-        records,
-        key = lambda rec: rec.get("fields", {}.get("FullName", "").lower()
-                                 ))
-                                  
-#Fields we want
+
+#Fields we want displayed
     desired_fields = [
         "FullName",
         "GraduationYear2",
@@ -36,19 +31,31 @@ def index():
         "Rating",
     ]
 
+#Sort  alumni by full name 
+    sorted_records = sorted(
+        records,
+        key=lambda rec: rec
+            .get("fields", {})
+            .get("FullName", "")
+            .lower()
+    )
+
     alumni_data = [
         {
-            field: record.get("fields", {}).get(field, "N/A")
+            field: rec.get("fields", {}).get(field, "N/A")
             for field in desired_fields
         }
-        for record in records
+        for rec in sorted_records
     ]
 
+   
     return render_template("index.html", alumni=alumni_data)
 
-
 if __name__ == "__main__":
-    import pprint
+    app.run(debug=True)
+
+    """
+            import pprint
 
     # Testing endpoint
     print("Testing Airtable endpoint…")
@@ -60,7 +67,5 @@ if __name__ == "__main__":
 
     # Start Flask in debug mode
     app.run(debug=True)
-
-
-
-
+    
+"""
