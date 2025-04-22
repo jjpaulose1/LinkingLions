@@ -25,7 +25,7 @@ def index():
     sorted_records = sorted(
         records,
         key = lambda rec: rec.get("fields", {}.get("FullName", "").lower()
-        )
+                                 ))
                                   
 #Fields we want
     desired_fields = [
@@ -60,5 +60,7 @@ if __name__ == "__main__":
 
     # Start Flask in debug mode
     app.run(debug=True)
+
+
 
 
