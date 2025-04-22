@@ -55,18 +55,3 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-    """
-            import pprint
-
-    # Testing endpoint
-    print("Testing Airtable endpoint…")
-    resp = requests.get(AIRTABLE_URL, headers=HEADERS)
-    pprint.pprint({
-        "status": resp.status_code,
-        "payload": resp.json(),
-    })
-
-    # Start Flask in debug mode
-    app.run(debug=True)
-    
