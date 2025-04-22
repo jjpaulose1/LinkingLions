@@ -49,6 +49,14 @@ def index():
         }
         for rec in sorted_records
     ]
+    for entry in alumni_data:
+        raw = entry.get("Last Parsed Time")
+        if raw not in (None, "N/A"):
+            # Replace the trailing Z so fromisoformat can parse it:
+            dt = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+            # Format to "Month Year", e.g. "April 2025"
+            entry["Last Parsed Time"] = dt.strftime("%B %Y")
+
 
    
     return render_template("index.html", alumni=alumni_data, columns=desired_fields)
