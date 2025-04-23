@@ -24,7 +24,8 @@ def index():
 
 #Fields we want displayed
     desired_fields = [
-        "Name",
+        "First Name",
+        "Last Name",
         "Graduation Year",
         "Job Title",
         "LinkedIn",
