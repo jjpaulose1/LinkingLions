@@ -28,6 +28,7 @@ def index():
         "Last Name",
         "Graduation Year",
         "Job Title",
+        "PredictedCategory",
         "LinkedIn Profile",
     ]
 
