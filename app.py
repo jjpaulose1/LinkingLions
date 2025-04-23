@@ -28,8 +28,6 @@ def index():
         "GraduationYear2",
         "JobTitle",
         "LinkedInUrl",
-        "Rating",
-        "Confidence Score"
     ]
 
 #Sort  alumni by full name 
