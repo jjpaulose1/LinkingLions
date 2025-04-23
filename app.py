@@ -25,9 +25,9 @@ def index():
 #Fields we want displayed
     desired_fields = [
         "FullName",
-        "GraduationYear2",
+        "GraduationYear",
         "JobTitle",
-        "LinkedInUrl",
+        "LinkedIn",
     ]
 
 #Sort  alumni by full name 
