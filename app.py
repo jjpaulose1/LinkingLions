@@ -28,7 +28,7 @@ def index():
         "Last Name",
         "Graduation Year",
         "Job Title",
-        "LinkedIn",
+        "LinkedIn Profile",
     ]
 
 #Sort  alumni by full name 
