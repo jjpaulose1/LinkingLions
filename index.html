@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alumni Directory</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        a {
+            color: #0077b5;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alumni Directory</h1>
+    <table>
+        <thead>
+            <tr>
+                {% for col in columns %}
+                    <th>
+                        {% if col == "LinkedIn" %}
+                            LinkedIn Profile
+                        {% else %}
+                            {{ col }}
+                        {% endif %}
+                    </th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in alumni %}
+                <tr>
+                    {% for col in columns %}
+                        <td>
+                            {% if col == "LinkedIn" %}
+                                <a href="{{ person[col] }}" target="_blank">Profile</a>
+                            {% else %}
+                                {{ person[col] }}
+                            {% endif %}
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
 
