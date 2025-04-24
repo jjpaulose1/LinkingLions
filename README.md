@@ -109,7 +109,11 @@ The system can also support multi-tab expansion (e.g., events, internships, job 
 **Future Improvement**
 
 **Multi-tab Web Navigation**: Add pages or tabs for events, internships, or industry spotlights.
+
 **Alumni Profiles**: Create individual profile pages for each alumnus with additional context (bios, majors, locations, mentorship interests, etc.).
+
 **Data Input Forms**: Implement an alumni-facing submission form where users can update or add their own information, syncing directly to Airtable or an integrated backend.
+
 **Search and Filter Functionality**: Add advanced filtering (e.g., by industry, grad year, role) to enhance discoverability.
+
 **Admin Dashboard**: Build a simple password-protected interface to review submissions or approve updates.
