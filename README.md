@@ -4,14 +4,14 @@
 
 # **LinkingLions**
 
-	# Linking Lions empowers Loyola Marymount University students and alumni to connect through a dedicated online platform, fostering mentorship, career exploration, and professional development, ultimately strengthening the LMU community and enhancing career outcomes for students.
+Linking Lions empowers Loyola Marymount University students and alumni to connect through a dedicated online platform, fostering mentorship, career exploration, and professional development, ultimately strengthening the LMU community and enhancing career outcomes for students.
 
 # **Who are you helping?** 
-	# Loyola Marymount University students, alumni, and professors.
+Loyola Marymount University students, alumni, and professors.
 # **What problem are you solving?** 
-	# Bridging the gap between students and alumni to facilitate mentorship, networking, and career development opportunities.
+Bridging the gap between students and alumni to facilitate mentorship, networking, and career development opportunities.
 # **How will you solve that problem?**
-	# By creating an online platform with features for creating profiles, finding mentors, scheduling coffee chats, discovering relevant events, and  accessing industry-specific resources.
+By creating an online platform with features for creating profiles, finding mentors, scheduling coffee chats, discovering relevant events, and  accessing industry-specific resources.
 # **What impact will your solution have?**
 	# A stronger LMU community, enhanced student career opportunities, and a more engaged alumni network. Students will feel more prepared and  confident going into the job search and LMU will strengthen the opportunities they can place their students into.
 
