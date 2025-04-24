@@ -46,6 +46,7 @@ The Career and Professional Development has been put in place to solve this prob
 **Role**: Crucial for designing and implementing the database that will store and manage all the platform's data. This includes: Designing the schema for user profiles, events, interview questions, case studies, and other relevant data points. Ensuring data integrity and security. Optimizing database performance for efficient data retrieval and analysis.
 
 **Tools**: SQL, database management systems (DBMS) like MySQL or PostgreSQL, and potentially cloud-based database solutions.
+
 2. **Web Development**
 
 **Role**: Essential for building the front-end and back-end of the "Linking Lions" website. This involves: Designing the user interface (UI) and user experience (UX) for optimal usability and engagement. Developing the website's functionality, including user registration, profile creation, search and filtering, event management, and communication features. Integrating the website with Salesforce and potentially other systems (e.g., university databases, authentication systems).
@@ -59,7 +60,7 @@ The Career and Professional Development has been put in place to solve this prob
 **Tools**: Data analysis tools (e.g., Python with Pandas, R), data visualization tools (e.g., Tableau, Power BI), and potentially Salesforce reporting and analytics tools.
 
 # **Solution Overview**
-    
-	# We built a dynamic system that connects a growing alumni database to a live website. Using Airtable as the backend, we created a centralized, easy-to-update spreadsheet where new entries can be added at any time. Then, we connected that database to a fully functional Flask-based web app. This allows the website to automatically pull and display up-to-date data, like names, graduation years, job titles, and LinkedIn profiles, without needing to manually update the code.
-	# LMU students can use the website to easily explore and search for alumni who match their career interests — whether by industry, job title, or graduation year — and reach out via LinkedIn to build connections and gain insight.
+
+We built a dynamic system that connects a growing alumni database to a live website. Using Airtable as the backend, we created a centralized, easy-to-update spreadsheet where new entries can be added at any time. Then, we connected that database to a fully functional Flask-based web app. This allows the website to automatically pull and display up-to-date data, like names, graduation years, job titles, and LinkedIn profiles, without needing to manually update the code.
+LMU students can use the website to easily explore and search for alumni who match their career interests — whether by industry, job title, or graduation year — and reach out via LinkedIn to build connections and gain insight.
 	
