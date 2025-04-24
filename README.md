@@ -85,6 +85,31 @@ We followed a simplified Software Development Life Cycle (SDLC) methodology to b
 
 This solution not only bridges the gap between students and alumni but also provides a live, growing resource that can evolve with future needs. With Airtable as a flexible backend, Flask as the routing engine, and Heroku as a cloud host, the project is both technically sound and accessible to users at every level.
 
+#**Next Steps**
 
+**Abandoned / Scaled**
+Initially, we explored using Salesforce as the primary platform to house and manage the alumni database. However, due to the complexity of Salesforce’s data model, permissions system, and integration requirements, we ultimately decided it was not the right fit for our team’s timeline and technical goals. Instead, we pivoted to Airtable, which provided a simpler, more accessible solution for both technical and non-technical contributors.
 
-#
+We also considered building out individual alumni profile pages early on, but due to time constraints and the need to finalize core functionality, that feature was deprioritized in this version.
+
+**Deployment**
+Environment variables (like the Airtable API key) should be stored securely using .env files or Heroku Config Vars.
+Implement user authentication if write-access or admin panels are needed.
+Set up a custom domain and enable HTTPS via Heroku’s free SSL.
+Optionally, move static assets to a CDN and enable Flask caching for performance.
+
+**Scaling**
+
+**Throughput**: Airtable's API handles pagination and can support thousands of records. The Flask app is optimized to fetch all records using offsets and sort them efficiently.
+
+**Adoption**: The clean frontend makes it easy for LMU students to engage with the alumni network. Future versions can easily integrate features like search, filtering, or category tags to increase usability.
+
+The system can also support multi-tab expansion (e.g., events, internships, job postings) without major architectural changes.
+
+**Future Improvement**
+
+**Multi-tab Web Navigation**: Add pages or tabs for events, internships, or industry spotlights.
+**Alumni Profiles**: Create individual profile pages for each alumnus with additional context (bios, majors, locations, mentorship interests, etc.).
+**Data Input Forms**: Implement an alumni-facing submission form where users can update or add their own information, syncing directly to Airtable or an integrated backend.
+**Search and Filter Functionality**: Add advanced filtering (e.g., by industry, grad year, role) to enhance discoverability.
+**Admin Dashboard**: Build a simple password-protected interface to review submissions or approve updates.
