@@ -73,4 +73,18 @@ LinkedIn API
 AirTable
 Heroku
 
+# **Solution Details**
+
+Our project aimed to build a scalable and user-friendly platform that allows Loyola Marymount University (LMU) students to access and explore an up-to-date alumni directory. We began by uploading an existing dataset into Airtable, which served as the backend database due to its intuitive spreadsheet interface and cloud-based accessibility. This structure allows the dataset to grow over time with minimal technical overhead — new entries can easily be added or modified by non-technical users, ensuring long-term maintainability.
+
+To power the frontend experience, we used Python and the Flask framework to connect to the Airtable database via its API. The requests library handled the API integration, pulling alumni records in JSON format. The data was then parsed and passed into HTML templates rendered with Jinja2, allowing us to dynamically populate the website with real-time information from Airtable. The web application was deployed using Heroku, making the site publicly accessible and easy to scale.
+
+In addition to the core data integration, we incorporated the LinkedIn API to enhance data accuracy and keep information current. Specifically, the API was used to update the "Job Title" column in Airtable by cross-referencing LinkedIn profiles associated with each alumni. This automated enrichment ensured that users accessing the site would be viewing the most relevant and recent career information.
+
+We followed a simplified Software Development Life Cycle (SDLC) methodology to build the solution. The process began with requirements gathering, focusing on LMU students’ need to explore alumni by career field, industry, and graduation year. During the design phase, we chose Airtable for its ease of use and integrated it with Flask for backend logic and Heroku for deployment. We implemented and tested each component locally, verifying that data flowed correctly from Airtable to the live site. Finally, the system was deployed to Heroku with a fully functional web interface that displays clean, organized alumni data, including names, graduation years, job titles, and LinkedIn links labeled as “Profile.”
+
+This solution not only bridges the gap between students and alumni but also provides a live, growing resource that can evolve with future needs. With Airtable as a flexible backend, Flask as the routing engine, and Heroku as a cloud host, the project is both technically sound and accessible to users at every level.
+
+
+
 #
