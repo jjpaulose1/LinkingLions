@@ -54,7 +54,7 @@ The Career and Professional Development has been put in place to solve this prob
 **Tools**: HTML, CSS, JavaScript, web frameworks (e.g., React, Angular), and potentially Salesforce development tools (Apex, Visualforce).
 
 3. **Business Analytics**
-4. 
+
 **Role**: Valuable for analyzing platform usage data and generating insights to improve the platform's effectiveness. This includes: Tracking key metrics like user engagement, coffee chat frequency, event attendance, and resource usage. Analyzing user behavior and preferences to identify areas for improvement. Generating reports and visualizations to communicate insights to stakeholders.
 
 **Tools**: Data analysis tools (e.g., Python with Pandas, R), data visualization tools (e.g., Tableau, Power BI), and potentially Salesforce reporting and analytics tools.
