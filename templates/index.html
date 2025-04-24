@@ -28,8 +28,8 @@
       <tr>
         {% for col in columns %}
           <td>
-            {% if col == "LinkedInUrl" and person[col] != "N/A" %}
-              <a href="{{ person[col] }}" target="_blank">Profile</a>
+            {% if col == "LinkedIn Profile" and person[col] != "N/A" %}
+              <a href="{{ person[col] }}" target="_blank" rel="noopener noreferrer">Profile</a>
             {% else %}
               {{ person[col] }}
             {% endif %}
