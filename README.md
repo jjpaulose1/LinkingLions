@@ -64,4 +64,13 @@ The Career and Professional Development has been put in place to solve this prob
 We built a dynamic system that connects a growing alumni database to a live website. Using Airtable as the backend, we created a centralized, easy-to-update spreadsheet where new entries can be added at any time. Then, we connected that database to a fully functional Flask-based web app. This allows the website to automatically pull and display up-to-date data, like names, graduation years, job titles, and LinkedIn profiles, without needing to manually update the code.
 
 LMU students can use the website to easily explore and search for alumni who match their career interests — whether by industry, job title, or graduation year — and reach out via LinkedIn to build connections and gain insight.
-	
+
+ # **Tech Stack**
+
+Python
+Flask
+LinkedIn API
+AirTable
+Heroku
+
+#
