@@ -11,18 +11,27 @@ AIRTABLE_API_KEY = "patvoUhA9bzbZjhQh.bec53ab20727cde451c5dae63341aa770cc07b462e
 AIRTABLE_URL = f"https://api.airtable.com/v0/{AIRTABLE_BASE_ID}/{AIRTABLE_TABLE_NAME}"
 HEADERS = {"Authorization": f"Bearer {AIRTABLE_API_KEY}"}
 
+def fetch_all_records():
+    all_recs = []
+    params = {
+        'pageSize': 100,
+        # 'view': 'All Alumni'      # <-- if you need a specific view
+    }
+    while True:
+        resp = requests.get(AIRTABLE_URL, headers=HEADERS, params=params)
+        data = resp.json()
+        all_recs.extend(data.get('records', []))
+        if 'offset' in data:
+            params['offset'] = data['offset']
+        else:
+            break
+    return all_recs
+
+
 @app.route("/")
 def index():
-
-    response = requests.get(AIRTABLE_URL, headers=HEADERS)
-    if response.status_code != 200:
-        return f"Error fetching data: {response.status_code}"
-
-
-    data = response.json()
-    records = data.get("records", [])
-
-#Fields we want displayed
+    records = fetch_all_records()
+    #Fields we want displayed
     desired_fields = [
         "First Name",
         "Last Name",
@@ -32,26 +41,19 @@ def index():
         "LinkedIn Profile",
     ]
 
-#Sort  alumni by full name 
-    sorted_records = sorted(
-        records,
-        key=lambda rec: rec
-            .get("fields", {})
-            .get("FullName", "")
-            .lower()
-    )
-
-    alumni_data = [
-        {
-            field: rec.get("fields", {}).get(field, "N/A")
-            for field in desired_fields
+    alumni_data = []
+    for rec in records: 
+        fields = rec.get("fields", {})
+        filtered = {
+            key: fields.get(key, "N/A")
+            for key in desired_fields
         }
-        for rec in sorted_records
-    ]
-   
+        alumni_data.append(filtered)
+    alumni_data.sort(key = lambda x: (x["Last Name"].lower(), x["First Name"].lower()))
 
-   
-    return render_template("index.html", alumni=alumni_data, columns=desired_fields)
+
+    return render_template("index.html", alumni = alumni_data, columns = desired_fields)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
