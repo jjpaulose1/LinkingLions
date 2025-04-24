@@ -85,7 +85,7 @@ We followed a simplified Software Development Life Cycle (SDLC) methodology to b
 
 This solution not only bridges the gap between students and alumni but also provides a live, growing resource that can evolve with future needs. With Airtable as a flexible backend, Flask as the routing engine, and Heroku as a cloud host, the project is both technically sound and accessible to users at every level.
 
-#**Next Steps**
+# **Next Steps**
 
 **Abandoned / Scaled**
 Initially, we explored using Salesforce as the primary platform to house and manage the alumni database. However, due to the complexity of Salesforce’s data model, permissions system, and integration requirements, we ultimately decided it was not the right fit for our team’s timeline and technical goals. Instead, we pivoted to Airtable, which provided a simpler, more accessible solution for both technical and non-technical contributors.
@@ -117,3 +117,27 @@ The system can also support multi-tab expansion (e.g., events, internships, job 
 **Search and Filter Functionality**: Add advanced filtering (e.g., by industry, grad year, role) to enhance discoverability.
 
 **Admin Dashboard**: Build a simple password-protected interface to review submissions or approve updates.
+
+# **Retrospective**
+
+**Challenges Faced**
+
+**Salesforce Complexity**: We initially tried using Salesforce but found it too complex for our needs. We pivoted to Airtable for its simplicity and flexibility.
+
+**Airtable Pagination**: Airtable limits responses to 100 records. We solved this by implementing pagination using the offset parameter to load all records.
+
+**Link Rendering Issues**: LinkedIn links stored as HTML in Airtable are displayed as plain text. We fixed this by rendering links using Flask's |safe filter in the template.
+
+**System Integration**: Connecting Airtable, Flask, and Heroku required learning how to manage data flow cleanly across platforms.
+
+**Skills & Insights Gained**
+
+Learned how to integrate and parse data from REST APIs using JSON.
+
+Built dynamic web pages using Flask and Jinja2 templating.
+
+Deployed a live site using Heroku and managed environment variables securely.
+
+Gained experience in pivoting tools and adapting the tech stack to meet project goals.
+
+Focused on building a user-centered solution tailored to LMU students.
