@@ -141,3 +141,7 @@ Deployed a live site using Heroku and managed environment variables securely.
 Gained experience in pivoting tools and adapting the tech stack to meet project goals.
 
 Focused on building a user-centered solution tailored to LMU students.
+
+
+**Link to Slides**
+https://www.canva.com/design/DAGfqlV6iO0/LgqgIjBCBl7Xlo2J-UOPIw/edit?utm_content=DAGfqlV6iO0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
